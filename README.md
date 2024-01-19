@@ -1,2 +1,2 @@
 # flutt_clouds_parallax
-Animated clouds slide across the sky...
+Demo with sliding clouds that demonstrates a parallax effect
