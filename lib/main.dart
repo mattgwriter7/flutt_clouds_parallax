@@ -35,12 +35,126 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        extendBodyBehindAppBar: true,
         body: Container(
         //  set underlying Container to take up the entire screen
         //  ( only width needed for this, cuz the child Column will push height... ) 
           color: Colors.green,
           width: double.infinity,
-          child: Text( 'rdy'),
+          child: Stack(
+            children: [
+                
+                
+                
+                // ****************************
+                // SKY
+                // ****************************          
+                Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                      colors: [Colors.lightBlueAccent, Colors.blue],
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      ),
+                  ),   
+                ),              
+
+
+
+                // ****************************
+                // RAINBOW
+                // ****************************          
+                Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:
+                      AssetImage('./assets/images/rainbow.png'),
+                      fit: BoxFit.cover,
+                      //alignment: Alignment.center,
+                    ),
+                  ),   
+                ),  
+
+
+
+
+                // ****************************
+                // GRASS
+                // ****************************          
+                Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:
+                      AssetImage('./assets/images/grass.png'),
+                      fit: BoxFit.cover,
+                      //alignment: Alignment.center,
+                    ),
+                  ),   
+                ),  
+
+
+
+
+                // ****************************
+                // TREE
+                // ****************************          
+                Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:
+                      AssetImage('./assets/images/tree.png'),
+                      fit: BoxFit.cover,
+                      //alignment: Alignment.center,
+                    ),
+                  ),   
+                ),  
+
+
+
+                // ****************************
+                // APPLES
+                // ****************************          
+                Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:
+                      AssetImage('./assets/images/apples.png'),
+                      fit: BoxFit.cover,
+                      //alignment: Alignment.center,
+                    ),
+                  ),   
+                ), 
+
+
+
+                // ****************************
+                // GIRL
+                // ****************************          
+                Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:
+                      AssetImage('./assets/images/girl.png'),
+                      fit: BoxFit.cover,
+                      //alignment: Alignment.center,
+                    ),
+                  ),   
+                ),                                 
+
+            ]
+          ),
         ),  
       ),
     );
