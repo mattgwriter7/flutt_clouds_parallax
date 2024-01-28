@@ -33,15 +33,15 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   //  set up bottom cloud set ( "cloudset_1" )
   late AnimationController cloudset_1_controller;     //  it needs an animation controller  
-  final double  cloudset_1_left_max = 1000;           //  the maximum size of the loop (which is half of the width of the cloud image)
-  double        cloudset_1_left_current = 1000;       //  the current position of the loop
-  final int cloudset_1_loop_duration  = 300000;       //  how long in ms is animaion loop?    
+  final double  cloudset_1_left_max = 600;            //  the maximum size of the loop (which is half of the width of the cloud image)
+  double        cloudset_1_left_current = 600;        //  the current position of the loop
+  final int cloudset_1_loop_duration  = 30000;       //  how long in ms is animaion loop?    
 
   //  set up top cloud set ( "cloudset_2" )
   late AnimationController cloudset_2_controller;     
-  final double  cloudset_2_left_max = 1000;           
-  double        cloudset_2_left_current = 1000;       
-  final int cloudset_2_loop_duration  = 100000;       //  much slower moving   
+  final double  cloudset_2_left_max = 600;           
+  double        cloudset_2_left_current = 600;       
+  final int cloudset_2_loop_duration  = 20000;       //  much slower moving   
 
     // (this page) init and dispose
   @override
@@ -144,17 +144,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 Positioned(
                   left: cloudset_1_left_current,
                   top: 0,
-                  child: Image.asset('./assets/images/cloudset_bottom.png'),
+                  child: Opacity(opacity: .9, child: Image.asset('./assets/images/clouds_1_1200.png')),
                 ),
 
-                // *****************************************
-                // cloudset_2 ( the whiter, faster clouds )
-                // *****************************************          
-                Positioned(
-                  left: cloudset_2_left_current,
-                  top: 0,
-                  child: Image.asset('./assets/images/cloudset_top.png'),
-                ),
+
 
 
                 // ****************************
@@ -172,6 +165,17 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     ),
                   ),   
                 ),  
+
+
+
+                // *****************************************
+                // cloudset_2 ( the whiter, faster clouds )
+                // *****************************************          
+                Positioned(
+                  left: cloudset_2_left_current,
+                  top: 0,
+                  child: Opacity(opacity: 1, child: Image.asset('./assets/images/clouds_2_1200.png')),
+                ),
 
 
 
